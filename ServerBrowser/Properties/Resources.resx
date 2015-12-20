@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NotSupportedValue" xml:space="preserve">
+    <value>Not supported value</value>
+  </data>
+  <data name="Quake2Header" xml:space="preserve">
+    <value>_Quake2</value>
+  </data>
+  <data name="EglHeader" xml:space="preserve">
+    <value>_EGL</value>
+  </data>
+  <data name="R1Q2Header" xml:space="preserve">
+    <value>_R1Q2</value>
+  </data>
+  <data name="Quake2Exe" xml:space="preserve">
+    <value>quake2.exe</value>
+  </data>
+  <data name="EglExe" xml:space="preserve">
+    <value>egl.exe</value>
+  </data>
+  <data name="R1Q2Exe" xml:space="preserve">
+    <value>r1q2.exe</value>
+  </data>
+  <data name="ClientHeader" xml:space="preserve">
+    <value>_Client</value>
+  </data>
+  <data name="ServerHeader" xml:space="preserve">
+    <value>_Server</value>
+  </data>
+  <data name="ScanHeader" xml:space="preserve">
+    <value>_Scan</value>
+  </data>
+  <data name="RefreshHeader" xml:space="preserve">
+    <value>_Refresh</value>
+  </data>
+  <data name="ConnectHeader" xml:space="preserve">
+    <value>_Connect</value>
+  </data>
+  <data name="ToolsHeader" xml:space="preserve">
+    <value>_Tools</value>
+  </data>
+  <data name="LanguageHeader" xml:space="preserve">
+    <value>_Language</value>
+  </data>
+  <data name="EnglishHeader" xml:space="preserve">
+    <value>_English</value>
+  </data>
+  <data name="CzechHeader" xml:space="preserve">
+    <value>_Czech</value>
+  </data>
+  <data name="OptionsHeader" xml:space="preserve">
+    <value>_Options</value>
+  </data>
+  <data name="HelpHeader" xml:space="preserve">
+    <value>_Help</value>
+  </data>
+  <data name="AboutHeader" xml:space="preserve">
+    <value>_About</value>
+  </data>
+  <data name="FileHeader" xml:space="preserve">
+    <value>_File</value>
+  </data>
+  <data name="ExitHeader" xml:space="preserve">
+    <value>_Exit</value>
+  </data>
+  <data name="NameHeader" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PingHeader" xml:space="preserve">
+    <value>Ping</value>
+  </data>
+  <data name="PlayersHeader" xml:space="preserve">
+    <value>Players</value>
+  </data>
+  <data name="MapHeader" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="AddressHeader" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ScoreHeader" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="KeyHeader" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="ValueHeader" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="CannotExecute" xml:space="preserve">
+    <value>Cannot execute </value>
+  </data>
+  <data name="EnglishCulture" xml:space="preserve">
+    <value>en-US</value>
+  </data>
+  <data name="CzechCulture" xml:space="preserve">
+    <value>cs-CZ</value>
+  </data>
+  <data name="PlayerName" xml:space="preserve">
+    <value>Player Name</value>
+  </data>
+  <data name="Quake2ExeLocation" xml:space="preserve">
+    <value>Quake2.exe Location</value>
+  </data>
+  <data name="EnableErrorLogging" xml:space="preserve">
+    <value>Enable Error Logging</value>
+  </data>
+  <data name="ServerList" xml:space="preserve">
+    <value>Server List</value>
+  </data>
+  <data name="UseGlobalServerList" xml:space="preserve">
+    <value>Use Global Server List</value>
+  </data>
+  <data name="ServerTimeout" xml:space="preserve">
+    <value>Server Timeout</value>
+  </data>
+  <data name="ServerRefresh" xml:space="preserve">
+    <value>Server Refresh</value>
+  </data>
+  <data name="DisableServerRefresh" xml:space="preserve">
+    <value>Disable Server Refresh</value>
+  </data>
+  <data name="Milliseconds" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="ScanLocalhost" xml:space="preserve">
+    <value>Scan Localhost</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Servers" xml:space="preserve">
+    <value>Servers</value>
+  </data>
+  <data name="AddHeader" xml:space="preserve">
+    <value>_Add</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>D-Day Normandy Server Browser</value>
+  </data>
+</root>
