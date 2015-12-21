@@ -19,8 +19,8 @@ namespace ServerBrowser.Installers
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<MainViewModel>());
-            container.Register(Component.For<MainView>());
+            container.Register(Component.For<MainViewModel>().LifestyleSingleton());
+            container.Register(Component.For<MainView>().LifestyleSingleton());
             container.Register(Component.For<OptionsViewModel>().LifestyleTransient());
             container.Register(Component.For<OptionsView>().LifestyleTransient());
             container.Register(Component.For<IConfigurationService>().ImplementedBy<ConfigurationService>().LifestyleSingleton());

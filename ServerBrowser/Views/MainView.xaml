@@ -31,8 +31,6 @@
         <triggers:InputBindingTrigger>
             <triggers:InputBindingTrigger.InputBinding>
                 <KeyBinding Key="F5" />
-                <!--<KeyBinding Key="F6" cal:Message.Attach="[Event Click] = [Action Refresh()]" />
-                <KeyBinding Key="F9" cal:Message.Attach="[Event Click] = [Action Connect()]" />-->
             </triggers:InputBindingTrigger.InputBinding>
             <cal:ActionMessage MethodName="Scan"/>
         </triggers:InputBindingTrigger>
@@ -60,10 +58,16 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <tb:TaskbarIcon
-            IconSource="/Resources/ServerBrowser.ico"
-            ToolTipText="{Binding IsTimerRunning}"
+            IconSource="pack://application:,,,/ServerBrowser;component/Resources/ServerBrowser.ico"
+            ToolTipText="{x:Static properties:Resources.AppTitle}"
             Visibility="{Binding IsTrayVisible, Converter={StaticResource BooleanToVisibilityConverter}}"
-            cal:Message.Attach="[Event TrayMouseDoubleClick] = [Action TrayDoubleClick()]" />
+            cal:Message.Attach="[Event TrayMouseDoubleClick] = [Action TrayDoubleClick()]">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="{x:Static properties:Resources.ExitHeader}" cal:Message.Attach="[Event Click] = [Action Exit()]" />
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
         <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" IsMainMenu="True">
             <MenuItem Header="{x:Static properties:Resources.FileHeader}">
                 <MenuItem Header="{x:Static properties:Resources.ExitHeader}" cal:Message.Attach="[Event Click] = [Action Exit()]" />
