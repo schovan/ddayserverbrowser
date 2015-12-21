@@ -10,7 +10,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Castle.Windsor.Installer;
-using ServerBrowser.Services;
 using ServerBrowser.Services.Configuration;
 using ServerBrowser.ViewModels;
 

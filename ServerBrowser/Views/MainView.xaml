@@ -84,15 +84,14 @@
                 <MenuItem Header="{x:Static properties:Resources.ScanHeader}" InputGestureText="F5" cal:Message.Attach="[Event Click] = [Action Scan()]" />
                 <MenuItem Header="{x:Static properties:Resources.RefreshHeader}" InputGestureText="F6" cal:Message.Attach="[Event Click] = [Action RefreshServers()]" IsEnabled="{Binding CanExecuteCommands}">
                     <MenuItem.Icon>
-                        <Image Source="/Resources/refresh.png" />
+                        <Image Source="pack://application:,,,/ServerBrowser;component/Resources/refresh.png" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="{x:Static properties:Resources.ConnectHeader}" InputGestureText="F9" cal:Message.Attach="[Event Click] = [Action Connect()]" IsEnabled="{Binding CanExecuteCommands}">
                     <MenuItem.Icon>
-                        <Image Source="/Resources/play.png" />
+                        <Image Source="pack://application:,,,/ServerBrowser;component/Resources/play.png" />
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="{x:Static properties:Resources.AddHeader}" InputGestureText="F12"/>
             </MenuItem>
             <MenuItem Header="{x:Static properties:Resources.ToolsHeader}">
                 <MenuItem Header="{x:Static properties:Resources.LanguageHeader}">
@@ -104,14 +103,14 @@
                 </MenuItem>
                 <MenuItem Header="{x:Static properties:Resources.OptionsHeader}" cal:Message.Attach="[Event Click] = [Action Options()]" >
                     <MenuItem.Icon>
-                        <Image Source="/Resources/options.png" />
+                        <Image Source="pack://application:,,,/ServerBrowser;component/Resources/options.png" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="{x:Static properties:Resources.HelpHeader}">
                 <MenuItem Header="{x:Static properties:Resources.AboutHeader}" >
                     <MenuItem.Icon>
-                        <Image Source="/Resources/about.png" />
+                        <Image Source="pack://application:,,,/ServerBrowser;component/Resources/about.png" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
