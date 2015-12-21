@@ -1,16 +1,16 @@
 ﻿namespace ServerBrowser.Services.Server
 {
-    public class PlayerInfo
-    {
-        public string Name;
-        public int Ping;
-        public int Score;
+	public class PlayerInfo
+	{
+		public PlayerInfo(int score, int ping, string name)
+		{
+			Name = name;
+			Ping = ping;
+			Score = score;
+		}
 
-        public PlayerInfo(int score, int ping, string name)
-        {
-            this.Name = name;
-            this.Ping = ping;
-            this.Score = score;
-        }
-    }
+		public string Name { get; private set; }
+		public int Ping { get; private set; }
+		public int Score { get; private set; }
+	}
 }

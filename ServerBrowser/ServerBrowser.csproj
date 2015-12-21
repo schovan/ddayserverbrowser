@@ -90,6 +90,7 @@
     <Compile Include="Converters\InvertedBooleanConverter.cs" />
     <Compile Include="Services\Server\PlayerInfo.cs" />
     <Compile Include="Services\Server\ServerInfo.cs" />
+    <Compile Include="Services\Server\ServerInfoFactory.cs" />
     <Compile Include="Services\Configuration\ServerBrowserSettings.cs" />
     <Compile Include="Helpers\AsyncManualResetEvent.cs" />
     <Compile Include="Helpers\Bitmaps.cs" />
