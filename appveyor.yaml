@@ -1,0 +1,3 @@
+artifacts:
+- path: bin/Release/*.*
+  name: myartifact
