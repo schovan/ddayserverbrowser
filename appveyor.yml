@@ -1,0 +1,5 @@
+artifacts:
+- path: bin/Release/*.*
+  name: myartifact
+deploy:
+  artifacts: myartifact
