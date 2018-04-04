@@ -2,9 +2,17 @@ artifacts:
 - path: bin/Release/*.*
   name: myartifact
 deploy:
-   artifacts: myartifact
-- provider: Environment
-  name: production
+  release: myproduct-v$(appveyor_build_version)
+  description: 'Release description'
+  provider: GitHub
+  auth_token:
+    secure: b078c5bd832c743a9270cdb23dc363c52a3d0513 # your encrypted token from GitHub
+  artifacts: myartifact            # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
   on:
-    branch: master
-    platform: x86
+    branch: master                 # release from master branch only
+  
+  
+  
+
