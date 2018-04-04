@@ -2,8 +2,9 @@ artifacts:
 - path: bin/Release/*.*
   name: myartifact
 deploy:
- - provider: Environment
-    name: production
-    on:
-      branch: master
-  artifacts: myartifact
+   artifacts: myartifact
+- provider: Environment
+  name: production
+  on:
+    branch: master
+    platform: x86
