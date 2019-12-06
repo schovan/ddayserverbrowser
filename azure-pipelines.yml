@@ -10,10 +10,11 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  MajorVersion: 1
+  MajorVersion: 3
   MinorVersion: 0
   InitialReleaseTagNumber: 1
   IncrementReleaseTagNumber: $[counter(variables['InitialReleaseTagNumber'], 0)]
+  version: '$(MajorVersion).$(MinorVersion).$(IncrementReleaseTagNumber)'
   solution: 'ServerBrowser.sln'
   buildConfiguration: 'Release'
 
@@ -35,12 +36,11 @@ steps:
     publishWebProjects: false
     zipAfterPublish: true
 
-- task: PublishBuildArtifacts@1
-  displayName: Artifact ServerBrowser.zip
+- task: CmdLine@2
   inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: ServerBrowser
-
+    script: 'rename s.zip ddayserverbrowser-windows-$(version).zip'
+    workingDirectory: '$(Build.ArtifactStagingDirectory)'
+    
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'github.com_schovan'
@@ -48,6 +48,6 @@ steps:
     action: 'create'
     target: '$(Build.SourceVersion)'
     tagSource: 'userSpecifiedTag'
-    tag: '$(MajorVersion).$(MinorVersion).$(IncrementReleaseTagNumber)'
+    tag: '$(version)'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
