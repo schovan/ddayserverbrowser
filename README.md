@@ -1,5 +1,5 @@
 # ddayserverbrowser
-D-Day Normady (Quake 2 mod) server browser.
+D-Day Normady (Quake 2 mod) server browser. Requires Windows and [.NET Core 3.0 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.0.1-windows-x64-installer).
 
 [![Build Status](https://dev.azure.com/schovan/ServerBrowser/_apis/build/status/schovan.ddayserverbrowser?branchName=master)](https://dev.azure.com/schovan/ServerBrowser/_build/latest?definitionId=12&branchName=master)
 
