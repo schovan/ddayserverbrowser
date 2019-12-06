@@ -20,6 +20,7 @@ steps:
     command: build
     projects: '$(solution)'
     arguments: '--configuration $(buildConfiguration)'
+    nugetConfigPath: 'nuget.config'
 
 - task: DotNetCoreCLI@2
   displayName: Publish
