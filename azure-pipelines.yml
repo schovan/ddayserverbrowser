@@ -39,7 +39,7 @@ steps:
 
 - task: GitHubRelease@1
   inputs:
-    gitHubConnection: schovan
+    gitHubConnection: 'github.com_schovan'
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
