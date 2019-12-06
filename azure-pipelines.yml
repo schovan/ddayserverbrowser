@@ -10,6 +10,10 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
+  MajorVersion: 1
+  MinorVersion: 0
+  InitialReleaseTagNumber: 1
+  IncrementReleaseTagNumber: $[counter(variables['InitialReleaseTagNumber'], 0)]
   solution: 'ServerBrowser.sln'
   buildConfiguration: 'Release'
 
@@ -29,12 +33,12 @@ steps:
     projects: '$(solution)'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     publishWebProjects: false
-    zipAfterPublish: false
+    zipAfterPublish: true
 
 - task: PublishBuildArtifacts@1
   displayName: Artifact ServerBrowser.zip
   inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)/s'
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: ServerBrowser
 
 - task: GitHubRelease@1
@@ -44,6 +48,6 @@ steps:
     action: 'create'
     target: '$(Build.SourceVersion)'
     tagSource: 'userSpecifiedTag'
-    tag: '3.0.0'
+    tag: '$(MajorVersion).$(MinorVersion).$(IncrementReleaseTagNumber)'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
