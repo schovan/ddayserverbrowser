@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerBrowser", "ServerBrowser\ServerBrowser.csproj", "{30BC0DED-C07B-4109-9DB5-436288AE1121}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerBrowser", "ServerBrowser\ServerBrowser.csproj", "{2BD0D843-3989-475B-8E71-4C9D4EB29EB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{30BC0DED-C07B-4109-9DB5-436288AE1121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30BC0DED-C07B-4109-9DB5-436288AE1121}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30BC0DED-C07B-4109-9DB5-436288AE1121}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30BC0DED-C07B-4109-9DB5-436288AE1121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD0D843-3989-475B-8E71-4C9D4EB29EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD0D843-3989-475B-8E71-4C9D4EB29EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD0D843-3989-475B-8E71-4C9D4EB29EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD0D843-3989-475B-8E71-4C9D4EB29EB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA61C5E7-698E-430D-9E2D-0F523052163A}
 	EndGlobalSection
 EndGlobal

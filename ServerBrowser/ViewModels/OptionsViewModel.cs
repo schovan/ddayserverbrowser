@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Caliburn.Micro;
 using ServerBrowser.Properties;
@@ -159,10 +161,10 @@ namespace ServerBrowser.ViewModels
 			}
 		}
 
-		protected override void OnInitialize()
+        protected override Task OnInitializeAsync(CancellationToken cancellationToken)
 		{
-			base.OnInitialize();
 			DisplayName = Resources.Options;
+            return Task.CompletedTask;
 		}
 
 		public void Ok()
@@ -197,6 +199,7 @@ namespace ServerBrowser.ViewModels
 
 		private void LoadSettings()
 		{
+            _configurationService.Load();
 			ServerList = _configurationService.Settings.ServerList;
 			if (_configurationService.Settings.ServerList == ServerBrowserSettings.ServerListDefaultValue)
 			{

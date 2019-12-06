@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Interactivity;
+using Microsoft.Xaml.Behaviors;
 
 namespace ServerBrowser.Behaviors
 {

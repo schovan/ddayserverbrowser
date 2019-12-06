@@ -1,26 +1,20 @@
-﻿using System.Configuration;
-
-namespace ServerBrowser.Services.Configuration
+﻿namespace ServerBrowser.Services.Configuration
 {
     public class ConfigurationService : IConfigurationService
     {
-        private System.Configuration.Configuration _configuration;
-
-        private ServerBrowserSettings _settings;
-        public ServerBrowserSettings Settings
-        {
-            get { return _settings; }
-        }
+        public ServerBrowserSettings Settings { get; private set; }
 
         public void Load()
         {
-            _configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            _settings = (ServerBrowserSettings)_configuration.Sections["ServerBrowserSettings"];
+            Settings = new ServerBrowserSettings()
+            {
+                ServerList = "http://www.quakeservers.net/quake2/servers/t=dday/so=8/", Quake2Directory = @"d:\games\quake2", PlayerName = "newbie", Quake2Client = "quake2.exe",
+                ServerTimeout = 300, ServerRefresh = 10, Culture = "en-US"
+            };
         }
 
         public void Save()
         {
-            _configuration.Save(ConfigurationSaveMode.Modified);
         }
     }
 }

@@ -152,10 +152,10 @@ namespace ServerBrowser.ViewModels
 			}
 		}
 
-		protected override void OnInitialize()
+        protected override Task OnInitializeAsync(CancellationToken cancellationToken)
 		{
-			base.OnInitialize();
 			DisplayName = Resources.AppTitle;
+            return Task.CompletedTask;
 		}
 
 		public async void Exit()
@@ -168,7 +168,7 @@ namespace ServerBrowser.ViewModels
 		public async void Options()
 		{
 			await StopTask();
-			if (_windowManager.ShowDialog(_optionsViewModel) == true)
+			if (await _windowManager.ShowDialogAsync(_optionsViewModel) == true)
 			{
 			}
 			StartTask();
