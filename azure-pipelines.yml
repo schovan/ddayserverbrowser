@@ -36,3 +36,13 @@ steps:
   inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)/s'
     artifactName: ServerBrowser
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: schovan
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
