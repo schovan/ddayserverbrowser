@@ -245,7 +245,7 @@ namespace ServerBrowser.ViewModels
 
 		private void StartTask(bool delay = false)
 		{
-			if (_configurationService.Settings.ServerRefresh == ServerBrowserSettings.ServerRefreshDisabledValue)
+			if (_configurationService.Settings.ServerRefresh == _configurationService.ServerRefreshDisabledValue)
 			{
 				return;
 			}

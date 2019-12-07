@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
@@ -12,6 +11,7 @@ using Castle.Facilities.TypedFactory;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using Castle.MicroKernel.Registration;
+using ServerBrowser.Services.Configuration;
 using ServerBrowser.ViewModels;
 
 namespace ServerBrowser
@@ -62,10 +62,12 @@ namespace ServerBrowser
 		}
 
 		private void InitializeCulture()
-		{
-			if (ConfigurationManager.AppSettings.AllKeys.Contains("Culture"))
+        {
+            var configurationService = new ConfigurationService();
+            configurationService.Load();
+            var culture = configurationService.Settings.Culture;
+			if (culture != null)
 			{
-				var culture = ConfigurationManager.AppSettings["Culture"];
 				Thread.CurrentThread.CurrentCulture = new CultureInfo(culture);
 				Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
 				CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(culture);

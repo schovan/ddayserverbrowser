@@ -1,7 +1,6 @@
 ﻿using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using Caliburn.Micro;
 using ServerBrowser.Properties;
 using ServerBrowser.Services.Configuration;
@@ -201,7 +200,7 @@ namespace ServerBrowser.ViewModels
 		{
             _configurationService.Load();
 			ServerList = _configurationService.Settings.ServerList;
-			if (_configurationService.Settings.ServerList == ServerBrowserSettings.ServerListDefaultValue)
+			if (_configurationService.Settings.ServerList == _configurationService.ServerListDefaultValue)
 			{
 				UseGlobalServerList = true;
 			}
@@ -210,9 +209,9 @@ namespace ServerBrowser.ViewModels
 			ScanLocalhost = _configurationService.Settings.ScanLocalhost;
 			EnableLogging = _configurationService.Settings.EnableLogging;
 			ServerTimeout = _configurationService.Settings.ServerTimeout;
-			if (_configurationService.Settings.ServerRefresh == ServerBrowserSettings.ServerRefreshDisabledValue)
+			if (_configurationService.Settings.ServerRefresh == _configurationService.ServerRefreshDisabledValue)
 			{
-				ServerRefresh = ServerBrowserSettings.ServerRefreshDefaultValue;
+				ServerRefresh = _configurationService.ServerRefreshDefaultValue;
 				DisableServerRefresh = true;
 			}
 			else
@@ -229,7 +228,7 @@ namespace ServerBrowser.ViewModels
 			_configurationService.Settings.ScanLocalhost = ScanLocalhost;
 			_configurationService.Settings.EnableLogging = EnableLogging;
 			_configurationService.Settings.ServerTimeout = ServerTimeout;
-			_configurationService.Settings.ServerRefresh = DisableServerRefresh ? ServerBrowserSettings.ServerRefreshDisabledValue : ServerRefresh;
+			_configurationService.Settings.ServerRefresh = DisableServerRefresh ? _configurationService.ServerRefreshDisabledValue : ServerRefresh;
 		}
 	}
 }

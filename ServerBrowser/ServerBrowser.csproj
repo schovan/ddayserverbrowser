@@ -7,21 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\about.png" />
-    <None Remove="Resources\circle.png" />
-    <None Remove="Resources\options.png" />
-    <None Remove="Resources\play.png" />
-    <None Remove="Resources\refresh.png" />
-    <None Remove="Resources\ServerBrowser.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Caliburn.Micro" Version="4.0.91-alpha" />
     <PackageReference Include="Castle.Windsor" Version="5.0.1" />
     <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.0.8" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +19,12 @@
     <Resource Include="Resources\play.png" />
     <Resource Include="Resources\refresh.png" />
     <Resource Include="Resources\ServerBrowser.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
